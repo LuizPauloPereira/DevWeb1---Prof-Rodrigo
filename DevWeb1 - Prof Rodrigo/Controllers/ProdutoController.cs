@@ -12,7 +12,8 @@ namespace DevWeb1___Prof_Rodrigo.Controllers
         // GET: Produto
         public ActionResult Index()
         {
-            return View();
+            List<Produto> listaProdutos = new List<Produto>();
+            return View(listaProdutos);
         }
 
         public ActionResult Create()

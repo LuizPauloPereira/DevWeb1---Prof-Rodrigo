@@ -13,6 +13,12 @@ namespace DevWeb1___Prof_Rodrigo.Controllers
         public ActionResult Index()
         {
             List<Produto> listaProdutos = new List<Produto>();
+            listaProdutos.Add(
+                new Produto {
+                    Id = 1,
+                    Nome = "Produto1",
+                    Descricao = "Descrição do Produto1"
+                });
             return View(listaProdutos);
         }
 
@@ -21,37 +27,19 @@ namespace DevWeb1___Prof_Rodrigo.Controllers
             return View();
         }
 
-        public ActionResult Details()
+        public ActionResult Details(Produto produto)
         {
-            return View();
+            return View(produto);
         }
 
-        public ActionResult Update()
+        public ActionResult Update(Produto produto)
         {
-            return View();
+            return View(produto);
         }
 
-        public ActionResult Delete()
+        public ActionResult Delete(Produto produto)
         {
-            return View();
-        }
-
-
-        // POST: Produto
-        [HttpPost]
-        public ActionResult Create(Produto produto)
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Update(int id)
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Delete(int id)
-        {
-            return View();
+            return View(produto);
         }
     }
 }
